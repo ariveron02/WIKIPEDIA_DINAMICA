@@ -1,3 +1,7 @@
+<?php
+include '../includes/header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/.css">
 </head>
 <body>
 
@@ -16,6 +20,14 @@
             </div>
             
             <div class="card-body p-4">
+
+                <!-- 🔥 MENSAJE DE ERROR -->
+                <?php if (isset($_GET['error'])): ?>
+                    <div class="alert alert-danger text-center">
+                        Correo o contraseña incorrectos.
+                    </div>
+                <?php endif; ?>
+
                 <form action="../backend/procesarLogin.php" method="POST" class="needs-validation" novalidate>
                     
                     <div class="mb-3">
@@ -34,11 +46,31 @@
                         <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                     </div>
                     
+                </form> <!-- 🔥 FALTABA ESTO -->
+
             </div>
         </div>
     </div>
 
+    <!-- Validación Bootstrap -->
+    <script>
+    (() => {
+        'use strict'
+        const forms = document.querySelectorAll('.needs-validation')
+
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script>
-    
+<?php include '../includes/footer.php'; ?>
 </body>
 </html>

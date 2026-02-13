@@ -6,4 +6,9 @@ VALUES (
     '$2y$10$w7Xu8K4WN7HVB5yu9cFzaulFIgUvyJJldWESNDxZIhNhLMo2MoBmS'
 );
 
+EMAIL : admin@wikiagora.com
 🔑 Password: admin123
+
+EJECUTAR ESTOS COMANDOS EN ESE ORDEN
+docker-compose build --no-cache
+docker-compose up -d
