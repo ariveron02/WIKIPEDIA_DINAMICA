@@ -1,0 +1,9 @@
+INSERT INTO usuarios (rol, name, email, password)
+VALUES (
+    'admin',
+    'Administrador',
+    'admin@wikiagora.com',
+    '$2y$10$w7Xu8K4WN7HVB5yu9cFzaulFIgUvyJJldWESNDxZIhNhLMo2MoBmS'
+);
+
+🔑 Password: admin123

@@ -32,7 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['rol'] = $usuario['rol'];
             $_SESSION['login'] = true;
 
-            header("Location: pagPrincipal.php");
+            if ($usuario['rol'] === 'admin') {
+                header("Location: ../frontend/admin.php");
+            } else {
+                header("Location: ../pagPrincipal.php");
+            }
             exit();
         }
     }
