@@ -22,7 +22,7 @@ require_once __DIR__ . '/../includes/conexion.php';
         </a>
         <!-- Botones a la derecha -->
         <div class="ms-auto d-flex">
-            <a href="frontend/cerrar_sesion.php" class="btn btn-outline-light">Cerrar sesión</a>
+            <a href="backend/cerrar_sesion.php" class="btn btn-outline-light">Cerrar sesión</a>
         </div>
     </div>
 </nav>
