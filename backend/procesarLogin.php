@@ -34,8 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($usuario['rol'] === 'admin') {
                 header("Location: ../frontend/admin.php");
-            } else {
-                header("Location: ../pagPrincipal.php");
+            }else{
+                header("Location: pagPrincipal.php");
             }
             exit();
         }
