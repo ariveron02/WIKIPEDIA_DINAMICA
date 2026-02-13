@@ -10,6 +10,31 @@
 </head>
 <body>
 <!-- NAVBAR PRINCIPAL -->
+<header class="navbar">
+    <div class="nav-container">
+        
+        <div class="logo">
+            <div class="logo-box">B</div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">FAQs</a>
+            
+        </nav>
+
+        <div class="nav-actions">
+            <input type="text" placeholder="Search..." class="search-input">
+
+            <button class="btn btn-outline" >Login</button>
+            <button class="btn btn-primary">Sign-up</button>
+        </div>
+
+    </div>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
