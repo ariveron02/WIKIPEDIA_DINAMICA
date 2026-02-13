@@ -20,11 +20,11 @@ $resultado = mysqli_query($conexion, $sql);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa; /* Fondo blanco total */
+            background-color: #000000; /* Fondo negro total */
             color: white;
         }
         .navbar {
-            background-color: #000000; /* Fondo negro para el nav */
+            background-color: #f8f9fa; /* Fondo claro para el nav como en tu imagen */
             border-radius: 50px; /* Bordes redondeados tipo píldora */
             margin: 20px auto;
             max-width: 95%;
@@ -44,7 +44,7 @@ $resultado = mysqli_query($conexion, $sql);
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="../fotos/wikiagora_blanco.png" alt="Logo" height="30">
+                <img src="fotos/wikiagora_blanco.webp" alt="Logo" height="30">
             </a>
 
             <div class="ms-auto d-flex align-items-center">
