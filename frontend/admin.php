@@ -1,17 +1,14 @@
 <?php
-// Incluimos la conexión (ajusta la ruta según donde pongas este archivo)
-require_once __DIR__ . '../includes/conexion.php';
-
-// Simulación de control de acceso (Idealmente aquí verificarías la sesión)
+// Incluimos la conexión
 session_start();
-if($_SESSION['rol'] != 'admin') { header("Location: login.php"); exit(); }
+require_once __DIR__ . '/../includes/conexion.php';
+
 
 // Consulta para obtener usuarios
 $sql = "SELECT name, email FROM usuarios";
 $resultado = mysqli_query($conexion, $sql);
-
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
