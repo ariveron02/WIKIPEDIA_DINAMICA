@@ -6,7 +6,7 @@ require_once __DIR__ . '/../includes/conexion.php';
 
 // Consulta para obtener usuarios
 $sql = "SELECT name, email FROM usuarios";
-$resultado = mysqli_query($conexion, $sql);
+$resultado = mysqli_query($conn, $sql);
 ?>
 
 
@@ -29,7 +29,7 @@ $resultado = mysqli_query($conexion, $sql);
                     <span class="navbar-text text-white fw-bold me-4 d-none d-md-block">
                         Panel de Administrador
                     </span>
-                    <a href="cerrar_sesion.php" class="btn btn-danger rounded-pill px-4 fw-bold shadow-sm">
+                    <a href="../backend/cerrar_sesion.php" class="btn btn-danger rounded-pill px-4 fw-bold shadow-sm">
                         Salir
                     </a>
                 </div>
