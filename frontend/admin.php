@@ -44,7 +44,7 @@ $resultado = mysqli_query($conexion, $sql);
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="fotos/wikiagora_blanco.webp" alt="Logo" height="30">
+                <img src="../fotos/wikiagora_blanco.png" alt="Logo" height="30">
             </a>
 
             <div class="ms-auto d-flex align-items-center">
