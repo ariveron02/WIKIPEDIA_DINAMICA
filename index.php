@@ -22,7 +22,6 @@
             <a href="#">Features</a>
             <a href="#">Pricing</a>
             <a href="#">FAQs</a>
-            
         </nav>
 
         <div class="nav-actions">
