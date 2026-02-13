@@ -9,7 +9,6 @@
     <link href= "./css/index.css">
 </head>
 <body>
-
 <!-- NAVBAR PRINCIPAL -->
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
     <div class="container">
