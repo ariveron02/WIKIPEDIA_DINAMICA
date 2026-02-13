@@ -9,6 +9,8 @@ if($_SESSION['rol'] != 'admin') { header("Location: login.php"); exit(); }
 // Consulta para obtener usuarios
 $sql = "SELECT name, email FROM usuarios";
 $resultado = mysqli_query($conexion, $sql);
+
+
 ?>
 
 <!DOCTYPE html>
