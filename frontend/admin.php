@@ -20,11 +20,11 @@ $resultado = mysqli_query($conexion, $sql);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #000000; /* Fondo negro total */
+            background-color: #f8f9fa; /* Fondo blanco total */
             color: white;
         }
         .navbar {
-            background-color: #f8f9fa; /* Fondo claro para el nav como en tu imagen */
+            background-color: #000000; /* Fondo negro para el nav */
             border-radius: 50px; /* Bordes redondeados tipo píldora */
             margin: 20px auto;
             max-width: 95%;
