@@ -1,5 +1,6 @@
 <?php
 $error = $_GET['error'] ?? 0; // Recibir código de error desde procesarRegistro.php
+include '../includes/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,14 +14,6 @@ $error = $_GET['error'] ?? 0; // Recibir código de error desde procesarRegistro
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="bg-light">
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="../index.php">WikiÁgora</a>
-    </div>
-</nav>
-
 <!-- Formulario centrado -->
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
     <div class="card shadow-lg p-4" style="width: 100%; max-width: 450px; border-radius: 15px;">
@@ -77,5 +70,6 @@ $error = $_GET['error'] ?? 0; // Recibir código de error desde procesarRegistro
         <p class="text-center mt-3 mb-0">¿Ya tienes cuenta? <a href="login.php">Inicia sesión</a></p>
     </div>
 </div>
+<?php include '../includes/footer.php'; ?>
 </body>
 </html>
