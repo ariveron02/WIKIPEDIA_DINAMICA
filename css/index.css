@@ -1,78 +1,133 @@
 /* ===== GENERAL ===== */
 html, body {
     height: 100%;
+    margin: 0;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding-top: 120px; 
 }
 
 main {
     flex: 1; 
 }
 
-
-/* ===== NAVBAR ===== */
-
-.custom-navbar {
-    background: linear-gradient(90deg, #0d6efd, #003c8f);
-    padding: 35px 0;
+/* ===== NAVBAR PROFESIONAL ===== */
+.navbar {
+    background-color: #0d3b66; /* Azul serio y elegante */
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra ligera */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Logo cuadrado */
 .logo-box {
-    background-color: white;
-    color: #0d6efd;
-    font-weight: bold;
-    width: 50px;       /* MÁS GRANDE */
-    height: 50px;
-    font-size: 22px;   /* Letra más grande */
+    background-color: #ffffff;  /* Fondo blanco */
+    color: #0d3b66;            /* Color del logo */
+    font-weight: 700;
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra sutil */
+    transition: transform 0.2s ease;
 }
 
-/* Texto WikiÁgora */
+.logo-box:hover {
+    transform: scale(1.05); /* Pequeño efecto hover */
+}
+
+/* Texto del nombre */
 .navbar-brand span {
-    font-size: 35px;  
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
     letter-spacing: 1px;
 }
 
 /* Links del menú */
 .nav-link {
-    color: white;
-    font-size: 24px;  
-    margin-right: 15px;
-    transition: 0.3s;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 20px;
+    padding: 5px 0;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
 .nav-link:hover {
-    opacity: 1.8;
+    color: #ffd700; /* Amarillo elegante */
+    border-bottom: 2px solid #ffd700;
+    border-radius: 2px;
 }
 
-/* Buscador más grande */
+/* Buscador */
 .search-input {
-    border-radius: 30px;
-    padding: 8px 20px;
-    font-size: 16px;
-    width: 200px;
+    border-radius: 25px;
+    padding: 6px 18px;
+    font-size: 14px;
+    width: 220px;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s, border-color 0.3s;
 }
 
-/* Botones más grandes */
+.search-input:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    outline: none;
+}
+
+/* Botones refinados */
 .btn {
-    padding: 8px 18px;
-    font-size: 16px;
+    padding: 6px 18px;
+    font-size: 14px;
     border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #0d3b66;
+}
+
+.btn-light {
+    background-color: #ffd700; /* Dorado serio */
+    color: #0d3b66;
+}
+
+.btn-light:hover {
+    background-color: #e6c200;
+    color: #0d3b66;
+}
+
+/* Adaptable a móviles */
+@media (max-width: 768px) {
+    .nav-link {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .search-input {
+        width: 150px;
+        font-size: 13px;
+    }
+    .navbar-brand span {
+        font-size: 24px;
+    }
 }
 
 /* ===== CAROUSEL ===== */
-.carousel-img {
-    object-fit: cover;
-    filter: brightness(60%);
-}
 
 /* Overlay texto central */
 .carousel-overlay {
@@ -82,37 +137,80 @@ main {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    z-index: 2; /* importante para que esté sobre la imagen */
 }
 
-.carousel-overlay h1 {
-    font-size: 50px;
-    font-weight: bold;
+.carousel-item {
+    position: relative;
+    height: 80vh; /* Ajustable, evita que toque el footer */
 }
 
-.carousel-overlay p {
-    font-size: 20px;
+.carousel-img {
+    height: 100%;
+    object-fit: cover;
 }
 
-/* ===== FOOTER MEJORADO ===== */
-
-.custom-footer {
-    background: linear-gradient(90deg, #003c8f, #0d6efd);
+/* ===== CONTENEDOR CONOCIMIENTO ===== */
+.conocimiento {
+    position: relative; /* relativo al carousel-item */
+    z-index: 2;
+    max-width: 90%;
+    padding: 30px 20px;
     color: white;
-    padding: 60px 0 30px 0;
-    margin-top: 80px;
+    background: rgba(0, 0, 0, 0.35); /* Fondo semi-transparente para mejor lectura */
+    border-radius: 20px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* Sombra de texto elegante */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra del contenedor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al hover */
+}
+
+.conocimiento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.conocimiento h1 {
+    font-size: 3.5rem; /* Más grande y elegante */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.conocimiento p {
+    font-size: 1.6rem;
+    margin-bottom: 1.8rem;
+    opacity: 0.95;
+    line-height: 1.5;
+}
+
+/* Botón principal */
+.conocimiento .btn {
+    padding: 14px 35px;
+    font-size: 1.25rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.conocimiento .btn:hover {
+    background: #0056b3; /* Azul más intenso */
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER PROFESIONAL ===== */
+.custom-footer {
+    background: linear-gradient(135deg, #003c8f, #0d6efd);
+    color: #f1f1f1;
+    padding: 80px 0 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-title {
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-.custom-footer {
-    background: linear-gradient(90deg, #003c8f, #0d6efd);
-    color: white;
-    padding: 60px 0 30px 0;
-    margin-top: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .footer-links {
@@ -121,22 +219,42 @@ main {
 }
 
 .footer-links li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .footer-links a {
-    color: white;
+    color: #f1f1f1;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     transition: 0.3s;
 }
 
 .footer-links a:hover {
+    color: #ffd700; /* Amarillo elegante al hover */
     text-decoration: underline;
-    opacity: 0.8;
 }
 
 .footer-divider {
     border-color: rgba(255,255,255,0.3);
-    margin: 30px 0;
+    margin: 35px 0;
+}
+
+/* Texto inferior del footer */
+.custom-footer .small {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .conocimiento h1 {
+        font-size: 2.2rem;
+    }
+    .conocimiento p {
+        font-size: 1.2rem;
+    }
+    .conocimiento .btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
 }
