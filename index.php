@@ -20,11 +20,6 @@
                 <span class="fw-bold">WikiÁgora</span>
             </a>
 
-            <!-- Botón para móviles -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
             <!-- Links, buscador y botones -->
             <div class="collapse navbar-collapse" id="navbarContenido">
                 <!-- Menú de navegación -->
