@@ -198,63 +198,93 @@ main {
 }
 
 /* ===== FOOTER PROFESIONAL ===== */
-.custom-footer {
-    background: linear-gradient(135deg, #003c8f, #0d6efd);
+/* ===== FOOTER PROFESIONAL ===== */
+footer.custom-footer {
+    background: linear-gradient(135deg, #003c8f, #0d6efd); /* Gradiente elegante */
     color: #f1f1f1;
     padding: 80px 0 40px 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.footer-title {
+/* Títulos de secciones */
+footer.custom-footer .footer-title {
     font-weight: 700;
     margin-bottom: 20px;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: #ffffff;
 }
 
-.footer-links {
+/* Links */
+footer.custom-footer .footer-links {
     list-style: none;
     padding: 0;
 }
 
-.footer-links li {
+footer.custom-footer .footer-links li {
     margin-bottom: 10px;
 }
 
-.footer-links a {
+footer.custom-footer .footer-links a {
     color: #f1f1f1;
     text-decoration: none;
     font-size: 15px;
     transition: 0.3s;
 }
 
-.footer-links a:hover {
-    color: #ffd700; /* Amarillo elegante al hover */
+footer.custom-footer .footer-links a:hover {
+    color: #ffd700; /* Amarillo elegante al pasar el cursor */
     text-decoration: underline;
 }
 
-.footer-divider {
+/* Divisor */
+footer.custom-footer .footer-divider {
     border-color: rgba(255,255,255,0.3);
     margin: 35px 0;
 }
 
-/* Texto inferior del footer */
-.custom-footer .small {
+/* Texto inferior */
+footer.custom-footer .small {
     color: rgba(255,255,255,0.8);
     font-size: 14px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
 }
 
-/* ===== RESPONSIVE ===== */
+/* Iconos o redes sociales opcionales */
+footer.custom-footer .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer.custom-footer .social-icons a {
+    color: #f1f1f1;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+footer.custom-footer .social-icons a:hover {
+    color: #ffd700;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .conocimiento h1 {
-        font-size: 2.2rem;
+    footer.custom-footer .footer-title {
+        font-size: 18px;
+        text-align: center;
     }
-    .conocimiento p {
-        font-size: 1.2rem;
+    footer.custom-footer .footer-links {
+        text-align: center;
     }
-    .conocimiento .btn {
-        padding: 10px 25px;
-        font-size: 1rem;
+    footer.custom-footer .footer-links a {
+        font-size: 14px;
+    }
+    footer.custom-footer .social-icons {
+        justify-content: center;
     }
 }
