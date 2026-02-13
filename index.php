@@ -23,6 +23,7 @@
             <a href="#">Pricing</a>
             <a href="#">FAQs</a>
             <a href="#">About</a>
+            <p>HOLA
         </nav>
 
         <div class="nav-actions">
