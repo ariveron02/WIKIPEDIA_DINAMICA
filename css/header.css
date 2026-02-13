@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    background-color: #1f2630;
+    padding: 15px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-box {
+    width: 45px;
+    height: 45px;
+    background-color: #f0f0f0;
+    color: #222;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #d1d5db;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #3a4454;
+    background-color: #2c3440;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+.search-input:focus {
+    border-color: #ffc107;
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #d1d5db;
+    color: #fff;
+}
+
+.btn-outline:hover {
+    background-color: #2c3440;
+}
+
+.btn-primary {
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+}

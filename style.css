@@ -1,0 +1,95 @@
+body{
+    background-color: rgb(52, 134, 201);
+}
+
+.logo{
+    background-color: rgba(64, 64, 225, 0.813);
+    height: 75px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    /* margin-bottom: 40px; */
+}
+
+.title{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 50px;
+    font-size: 35px;
+    margin-right: 750px;
+    margin-top: 10px;
+}
+
+input{
+    margin-left: 500px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    border: none;
+    box-shadow: 3px 3px 1px;
+    border-radius: 7px;
+    padding: 5px;
+    /* margin-right: 800px; */
+}
+
+.text{
+    color: white;
+    font-weight: bold;
+    margin-left: 70px;
+    margin-right: 70px;
+    font-size: 20px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.texto{ 
+    width: 1000px;
+}
+
+.sesion{
+    background-color: rgb(52, 134, 201);
+    color: white;
+    margin-left: 20px;
+    border: none;
+    box-shadow: 3px 3px 2px black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.registro{
+    background-color: rgb(52, 134, 201);
+    color: white;
+    border: none;
+    box-shadow: 3px 3px 2px black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.img1{
+    float: left;
+    margin-right: 15px;
+    height: 100%;
+    /* margin-bottom: 600px; */
+}
+
+.img2{
+    float: right;
+    height: 100%;
+    /* margin-left: 30px; */
+    /* display: inline-block; */
+}
+
+.texto{
+    display: flex;
+    align-items: flex-start;
+}
+
+.img{
+    overflow: hidden;
+    height: 507px;
+    width: 1400px;
+}
+
+link{
+    text-decoration: none;
+}
