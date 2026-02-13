@@ -7,3 +7,7 @@ VALUES (
 );
 
 🔑 Password: admin123
+
+EJECUTAR ESTOS COMANDOS EN ESE ORDEN
+docker-compose build --no-cache
+docker-compose up -d
