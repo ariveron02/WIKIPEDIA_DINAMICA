@@ -16,18 +16,6 @@
                 <div class="logo-box me-2">W</div>
                 <span class="fw-bold">WikiÁgora</span>
             </a>
-
-            <!-- Links, buscador y botones -->
-            <div class="collapse navbar-collapse" id="navbarContenido">
-                <!-- Menú de navegación -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
-                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Artículos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Categorías</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
-                </ul>
-            </div>
-        </div>
     </nav>
 
     <!-- Formulario centrado -->
