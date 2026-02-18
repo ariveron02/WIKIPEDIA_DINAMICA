@@ -46,6 +46,43 @@ require_once __DIR__ . '/../includes/conexion.php';
         </div>
     </nav>
 
+<div class="container mt-5">
+
+    <?php
+    $sql = "SELECT * FROM informacion ORDER BY created_at DESC";
+    $resultado = $conn->query($sql);
+
+    if($resultado && $resultado->num_rows > 0){
+        while($row = $resultado->fetch_assoc()){
+    ?>
+        <div class="card mb-5 shadow-sm p-3 position-relative">
+
+            <!-- Imagen flotando a la derecha -->
+            <?php if(!empty($row['img_tabla'])): ?>
+            <div class="float-end ms-3 mb-3" style="width: 300px;">
+                <div class="border rounded p-2 bg-light">
+                    <img src="<?php echo htmlspecialchars($row['img_tabla']); ?>" 
+                         alt="<?php echo htmlspecialchars($row['name_tabla']); ?>" 
+                         class="img-fluid rounded w-100">
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <!-- Texto del artículo -->
+            <h2 class="card-title"><?php echo htmlspecialchars($row['name_tabla']); ?></h2>
+            <p class="card-text"><?php echo nl2br(htmlspecialchars($row['info_tabla'])); ?></p>
+            <small class="text-muted">Publicado el <?php echo $row['created_at']; ?></small>
+
+            <div class="clearfix"></div>
+        </div>
+    <?php
+        }
+    } else {
+        echo "<div class='alert alert-info'>No hay artículos disponibles.</div>";
+    }
+    ?>
+
+</div>
 
 
 
