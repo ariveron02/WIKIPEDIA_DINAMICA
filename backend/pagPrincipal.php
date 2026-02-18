@@ -10,7 +10,7 @@ require_once __DIR__ . '/../includes/conexion.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WikiAgora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="../css/index.css"> -->
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <!-- NAVBAR PRINCIPAL -->
@@ -46,7 +46,7 @@ require_once __DIR__ . '/../includes/conexion.php';
         </div>
     </nav>
 
-    <div class="container mt-5">
+<div class="container mt-5">
 
     <?php
     $sql = "SELECT * FROM informacion ORDER BY created_at DESC";
@@ -55,15 +55,15 @@ require_once __DIR__ . '/../includes/conexion.php';
     if($resultado && $resultado->num_rows > 0){
         while($row = $resultado->fetch_assoc()){
     ?>
-        <div class="card mb-5 shadow-sm p-3">
+        <div class="card mb-5 shadow-sm p-3 position-relative">
 
             <!-- Imagen flotando a la derecha -->
             <?php if(!empty($row['img_tabla'])): ?>
-            <div class="float-end ms-3 mb-3" style="max-width: 300px;">
+            <div class="float-end ms-3 mb-3" style="width: 300px;">
                 <div class="border rounded p-2 bg-light">
                     <img src="<?php echo htmlspecialchars($row['img_tabla']); ?>" 
                          alt="<?php echo htmlspecialchars($row['name_tabla']); ?>" 
-                         class="img-fluid rounded">
+                         class="img-fluid rounded w-100">
                 </div>
             </div>
             <?php endif; ?>
@@ -73,7 +73,7 @@ require_once __DIR__ . '/../includes/conexion.php';
             <p class="card-text"><?php echo nl2br(htmlspecialchars($row['info_tabla'])); ?></p>
             <small class="text-muted">Publicado el <?php echo $row['created_at']; ?></small>
 
-            <div class="clearfix"></div> <!-- limpia float para el siguiente artículo -->
+            <div class="clearfix"></div>
         </div>
     <?php
         }
@@ -83,6 +83,7 @@ require_once __DIR__ . '/../includes/conexion.php';
     ?>
 
 </div>
+
 
 
     <div style="margin-top: 100px;"></div>

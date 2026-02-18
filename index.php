@@ -8,7 +8,7 @@
     <title>WikiÁgora</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/index.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 
 <body>
