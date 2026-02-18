@@ -25,8 +25,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Categorías</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
                 </ul>
-
-
+                
                 <!-- Botones de login / signup -->
                 <a href="frontend/login.php" class="btn btn-outline-light btn-sm me-2">Login</a>
                 <a href="frontend/registro.php" class="btn btn-light btn-sm">Sign Up</a>
