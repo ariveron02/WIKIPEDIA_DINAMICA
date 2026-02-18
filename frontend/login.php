@@ -13,22 +13,20 @@ include '../includes/header.php';
 </head>
 <body>
 
-    <div class="login-container">
-        <div class="card shadow-sm">
-            <div class="card-header bg-primary text-white text-center py-3">
-                <h4 class="mb-0">Iniciar Sesión</h4>
-            </div>
-            
-            <div class="card-body p-4">
+    <!-- Formulario centrado -->
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+        <div class="card shadow-lg p-4" style="width: 100%; max-width: 450px; border-radius: 15px;">
+            <h2 class="card-title text-center mb-4">Iniciar Sesión</h2>
 
-                <!-- 🔥 MENSAJE DE ERROR -->
+            <!-- MENSAJE DE ERROR -->
                 <?php if (isset($_GET['error'])): ?>
                     <div class="alert alert-danger text-center">
                         Correo o contraseña incorrectos.
                     </div>
                 <?php endif; ?>
 
-                <form action="../backend/procesarLogin.php" method="POST" class="needs-validation" novalidate>
+            <!-- Formulario -->
+            <form action="../backend/procesarLogin.php" method="POST" class="needs-validation" novalidate>
                     
                     <div class="mb-3">
                         <label for="email" class="form-label fw-bold">Correo electrónico</label>
@@ -46,9 +44,9 @@ include '../includes/header.php';
                         <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                     </div>
                     
-                </form> <!-- 🔥 FALTABA ESTO -->
+                </form>
 
-            </div>
+            <p class="text-center mt-3 mb-0">¿No tienes cuenta? <a href="registro.php">Regístrate</a></p>
         </div>
     </div>
 
