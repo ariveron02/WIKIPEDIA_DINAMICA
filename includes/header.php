@@ -25,11 +25,6 @@
                     <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
                 </ul>
 
-                <!-- Buscador -->
-                <form class="d-flex me-3">
-                    <input class="form-control form-control-sm search-input" type="search" placeholder="Buscar...">
-                </form>
-
                 <!-- Botones de login / signup -->
                 <a href="frontend/login.php" class="btn btn-outline-light btn-sm me-2">Login</a>
                 <a href="frontend/registro.php" class="btn btn-light btn-sm">Sign Up</a>
