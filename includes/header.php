@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../css/index.css"> -->
 </head>
 <body>
     <!-- NAVBAR PRINCIPAL -->
@@ -24,7 +25,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Categorías</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
                 </ul>
-                hola
+                
 
                 <!-- Botones de login / signup -->
                 <a href="frontend/login.php" class="btn btn-outline-light btn-sm me-2">Login</a>
