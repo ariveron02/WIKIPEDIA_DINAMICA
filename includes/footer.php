@@ -7,7 +7,7 @@
     <link href="../css/index.css" rel="stylesheet"> 
 </head>
 <body>
-    <footer class="custom-footer">
+    <div class="p-4"> <footer class="custom-footer rounded-5 shadow-sm p-5"> 
         <div class="container">
             <div class="row text-center text-md-start">
 
@@ -19,10 +19,10 @@
                 <div class="col-md-4 mb-4">
                     <h5 class="footer-title">Enlaces</h5>
                     <ul class="footer-links">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Artículos</a></li>
-                        <li><a href="#">Categorías</a></li>
-                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#" class="text-reset text-decoration-none">Inicio</a></li>
+                        <li><a href="#" class="text-reset text-decoration-none">Artículos</a></li>
+                        <li><a href="#" class="text-reset text-decoration-none">Categorías</a></li>
+                        <li><a href="#" class="text-reset text-decoration-none">Sobre nosotros</a></li>
                     </ul>
                 </div>
 
@@ -40,5 +40,6 @@
             </div>
         </div>
     </footer>
+</div>
 </body>
 </html>

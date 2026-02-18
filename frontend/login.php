@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
         <div class="container">
             <!-- LOGO -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
+            <a class="navbar-brand d-flex align-items-center" href="../index.php">
                 <div class="logo-box me-2">W</div>
                 <span class="fw-bold">WikiÁgora</span>
             </a>

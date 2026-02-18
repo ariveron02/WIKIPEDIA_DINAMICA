@@ -129,20 +129,9 @@ main {
 
 /* ===== CAROUSEL ===== */
 
-/* Overlay texto central */
-.carousel-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 2; /* importante para que esté sobre la imagen */
-}
-
 .carousel-item {
     position: relative;
-    height: 80vh; /* Ajustable, evita que toque el footer */
+    height: 80vh; 
 }
 
 .carousel-img {
@@ -152,25 +141,20 @@ main {
 
 /* ===== CONTENEDOR CONOCIMIENTO ===== */
 .conocimiento {
-    position: relative; /* relativo al carousel-item */
+    position: relative; 
     z-index: 2;
     max-width: 90%;
     padding: 30px 20px;
     color: white;
-    background: rgba(0, 0, 0, 0.35); /* Fondo semi-transparente para mejor lectura */
+    background: rgba(0, 0, 0, 0.35); 
     border-radius: 20px;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7); /* Sombra de texto elegante */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra del contenedor */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al hover */
-}
-
-.conocimiento:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .conocimiento h1 {
-    font-size: 3.5rem; /* Más grande y elegante */
+    font-size: 3.5rem; 
     font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -183,34 +167,39 @@ main {
     line-height: 1.5;
 }
 
-/* Botón principal */
-.conocimiento .btn {
-    padding: 14px 35px;
-    font-size: 1.25rem;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: background 0.3s ease, transform 0.3s ease;
+/* ===== SECCIONES EXTRA (Artículos, Categorías, Sobre nosotros) ===== */
+.hover-elevate {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-.conocimiento .btn:hover {
-    background: #0056b3; /* Azul más intenso */
-    transform: scale(1.05);
+.hover-elevate:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* ===== FOOTER PROFESIONAL ===== */
-footer.custom-footer {
-    background: linear-gradient(135deg, #003c8f, #0d6efd); /* Gradiente elegante */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
 }
+
+/* ===== FOOTER PERSONALIZADO (Caja redondeada y flotante) ===== */
+
+/* Contenedor que da el margen simétrico en todos los lados */
+footer.footer-container {
+    padding: 25px; /* Margen igual arriba, abajo e izquierda/derecha */
+}
+
 .custom-footer {
-    background: linear-gradient(135deg, #0d3b66, #0d3b66);
+    background: #0d3b66; /* Tu azul original */
     color: #f1f1f1;
-    padding: 80px 0 40px 0;
+    padding: 60px 40px; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: inset 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 30px; /* Bordes redondeados pedidios */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* Títulos de secciones */
-footer.custom-footer .footer-title {
+.custom-footer .footer-title {
     font-weight: 700;
     margin-bottom: 20px;
     font-size: 20px;
@@ -219,36 +208,33 @@ footer.custom-footer .footer-title {
     color: #ffffff;
 }
 
-/* Links */
-footer.custom-footer .footer-links {
+.custom-footer .footer-links {
     list-style: none;
     padding: 0;
 }
 
-footer.custom-footer .footer-links li {
+.custom-footer .footer-links li {
     margin-bottom: 10px;
 }
 
-footer.custom-footer .footer-links a {
-    color: #f1f1f1;
+.custom-footer .footer-links a {
+    color: #f1f1f1; /* Color original */
     text-decoration: none;
     font-size: 15px;
     transition: 0.3s;
 }
 
-footer.custom-footer .footer-links a:hover {
-    color: #ffd700; /* Amarillo elegante al pasar el cursor */
+.custom-footer .footer-links a:hover {
+    color: #ffd700; /* Tu amarillo original */
     text-decoration: underline;
 }
 
-/* Divisor */
-footer.custom-footer .footer-divider {
+.custom-footer .footer-divider {
     border-color: rgba(255,255,255,0.3);
     margin: 35px 0;
 }
 
-/* Texto inferior */
-footer.custom-footer .small {
+.custom-footer .small {
     color: rgba(255,255,255,0.8);
     font-size: 14px;
     margin-top: 20px;
@@ -256,59 +242,13 @@ footer.custom-footer .small {
     text-align: center;
 }
 
-/* Iconos o redes sociales opcionales */
-footer.custom-footer .social-icons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-footer.custom-footer .social-icons a {
-    color: #f1f1f1;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-footer.custom-footer .social-icons a:hover {
-    color: #ffd700;
-}
-
-/* Efecto de elevación para las categorías */
-.hover-elevate {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.hover-elevate:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-}
-
-/* Color de los iconos (opcional, requiere Bootstrap Icons) */
-.bi {
-    color: #003366;
-}
-
-/* Asegurar que las imágenes de las cards tengan el mismo tamaño */
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-/* RESPONSIVE */
+/* Responsive Footer */
 @media (max-width: 768px) {
-    footer.custom-footer .footer-title {
-        font-size: 18px;
+    .custom-footer {
+        padding: 40px 20px;
         text-align: center;
     }
-    footer.custom-footer .footer-links {
+    .custom-footer .footer-links {
         text-align: center;
-    }
-    footer.custom-footer .footer-links a {
-        font-size: 14px;
-    }
-    footer.custom-footer .social-icons {
-        justify-content: center;
     }
 }

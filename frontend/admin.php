@@ -32,12 +32,16 @@ $resultado_peticiones = mysqli_query($conn, $sql_pet);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Admin - WikiAgora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body class="bg-white">
 <div class="container mt-4">
     <nav class="navbar navbar-dark bg-dark rounded-pill shadow-sm px-4 py-2">
         <div class="container-fluid d-flex justify-content-between align-items-center">
-            <a class="navbar-brand p-0" href="#"><img src="../fotos/wikiagora_blanco.png" alt="WikiAgora" height="30"></a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-box me-2">W</div>
+                <span class="fw-bold">WikiÁgora</span>
+            </a>
             <div class="d-flex align-items-center">
                 <span class="navbar-text text-white fw-bold me-4 d-none d-md-block">Panel de Administrador</span>
                 <a href="../backend/cerrar_sesion.php" class="btn btn-danger rounded-pill px-4 fw-bold shadow-sm">Salir</a>
