@@ -196,3 +196,23 @@ El sistema jurídico federado establece normas comunes sobre investigación gen�
 Aunque ficticia, la Federación simboliza modelos hipotéticos de organización política futura en escenarios de exploración espacial prolongada.',
 '');
 
+
+UPDATE informacion 
+SET img_tabla = '../fotos/artenia.jpg'
+WHERE name_tabla = 'Imperio Solar de Aethernia';
+
+UPDATE informacion 
+SET img_tabla = '../fotos/digital.jpg'
+WHERE name_tabla = 'La Revolución Digital Global';
+
+UPDATE informacion 
+SET img_tabla = '../fotos/biblio.jpg'
+WHERE name_tabla = 'Biblioteca Subterránea de Valdris';
+
+UPDATE informacion 
+SET img_tabla = '../fotos/universo.jpg'
+WHERE name_tabla = 'Teoría del Horizonte Infinito';
+
+UPDATE informacion 
+SET img_tabla = '../fotos/orion.jpg'
+WHERE name_tabla = 'Federación Interestelar de Orion';
