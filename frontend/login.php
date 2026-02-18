@@ -1,7 +1,3 @@
-<?php
-include '../includes/header.php';
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,6 +8,27 @@ include '../includes/header.php';
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
+    <!-- NAVBAR PRINCIPAL -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+        <div class="container">
+            <!-- LOGO -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-box me-2">W</div>
+                <span class="fw-bold">WikiÁgora</span>
+            </a>
+
+            <!-- Links, buscador y botones -->
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <!-- Menú de navegación -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Artículos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Formulario centrado -->
     <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
