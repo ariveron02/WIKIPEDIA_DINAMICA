@@ -274,6 +274,28 @@ footer.custom-footer .social-icons a:hover {
     color: #ffd700;
 }
 
+/* Efecto de elevación para las categorías */
+.hover-elevate {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-elevate:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Color de los iconos (opcional, requiere Bootstrap Icons) */
+.bi {
+    color: #003366;
+}
+
+/* Asegurar que las imágenes de las cards tengan el mismo tamaño */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     footer.custom-footer .footer-title {
