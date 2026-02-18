@@ -1,6 +1,7 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,10 @@
 </head>
 
 <body>
-    <?php
-        include 'includes/header.php';
-    ?>
+    
+<?php
+include 'includes/header.php';
+?>
 
     <!-- CAROUSEL CON OVERLAY -->
     <main class="flex-grow-1">
