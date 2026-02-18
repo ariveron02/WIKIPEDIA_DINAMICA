@@ -11,6 +11,14 @@ require_once __DIR__ . '/../includes/conexion.php';
     <title>WikiAgora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
+    <style>
+        /* Resalta el artículo cuando se hace scroll desde el buscador */
+        :target {
+            border: 2px solid #0d6efd;
+            padding: 10px;
+            transition: all 0.5s;
+        }
+    </style>
 </head>
 <body>
     <!-- NAVBAR PRINCIPAL -->
@@ -33,8 +41,9 @@ require_once __DIR__ . '/../includes/conexion.php';
                 </ul>
 
                 <!-- Buscador -->
-                <form class="d-flex me-3">
-                    <input class="form-control form-control-sm search-input" type="search" placeholder="Buscar...">
+                <form class="d-flex me-3" onsubmit="location.href='#' + this.q.value.toLowerCase(); return false;">
+                    <input name="q" class="form-control form-control-sm search-input" type="text" placeholder="Buscar por id (ej: orion, artenia...)">
+                    <button class="btn btn-light btn-sm ms-2" type="submit">Ir</button>
                 </form>
 
                 <p class="text-white mb-0 me-3">
@@ -54,8 +63,18 @@ require_once __DIR__ . '/../includes/conexion.php';
 
     if($resultado && $resultado->num_rows > 0){
         while($row = $resultado->fetch_assoc()){
+
+            // Definir ids manuales según cada artículo
+            switch($row['name_tabla']){
+                case 'Imperio Solar de Aethernia': $id='artenia'; break;
+                case 'La Revolución Digital Global': $id='digital'; break;
+                case 'Biblioteca Subterránea de Valdris': $id='biblio'; break;
+                case 'Teoría del Horizonte Infinito': $id='universo'; break;
+                case 'Federación Interestelar de Orion': $id='orion'; break;
+                default: $id='articulo'.$row['id_tabla']; break;
+            }
     ?>
-        <div class="card mb-5 shadow-sm p-3 position-relative">
+        <div class="card mb-5 shadow-sm p-3 position-relative" id="<?php echo $id; ?>">
 
             <!-- Imagen flotando a la derecha -->
             <?php if(!empty($row['img_tabla'])): ?>
@@ -84,10 +103,8 @@ require_once __DIR__ . '/../includes/conexion.php';
 
 </div>
 
-
-
-    <div style="margin-top: 100px;"></div>
-    <?php include '../includes/footer.php'; ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<div style="margin-top: 100px;"></div>
+<?php include '../includes/footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
