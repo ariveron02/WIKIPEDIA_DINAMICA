@@ -14,7 +14,6 @@
     <?php
     include 'includes/header.php';
     ?>
-
         <!-- CAROUSEL CON OVERLAY -->
         <main class="flex-grow-1">
             <div id="carouselFondo" class="carousel slide carousel-fade" data-bs-ride="carousel">
