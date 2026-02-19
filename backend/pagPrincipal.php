@@ -30,28 +30,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['peticion_texto'], $_P
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#"><div class="logo-box me-2">W</div><span class="fw-bold">WikiÁgora</span></a>
-        <div class="collapse navbar-collapse" id="navbarContenido">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
-                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Artículos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Categorías</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-box me-2">W</div>
+                <span class="fw-bold">WikiÁgora</span>
+            </a>
 
-            <form class="d-flex me-3" onsubmit="location.href='#' + this.q.value.toLowerCase(); return false;">
-                <input name="q" class="form-control form-control-sm search-input" type="text" placeholder="Buscar por id (ej: orion, artenia...)">
-                <button class="btn btn-light btn-sm ms-2" type="submit">Ir</button>
-            </form>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <p class="text-white mb-0 me-3">Bienvenido, <b><?php echo isset($_SESSION['name']) ? htmlspecialchars($_SESSION['name']) : 'Usuario'; ?></b></p>
-            <a href="cerrar_sesion.php" class="btn btn-light btn-sm rounded-pill px-3">Cerrar Sesión</a>
+            <div class="collapse navbar-collapse" id="navbarContenido">
+                <form class="d-flex me-3" onsubmit="location.href='#' + this.q.value.toLowerCase(); return false;">
+                    <input name="q" class="form-control form-control-sm search-input" type="text" placeholder="Buscar por id...">
+                    <button class="btn btn-light btn-sm ms-2" type="submit">Ir</button>
+                </form>
+
+                <div class="d-flex align-items-center ms-auto">
+                    <p class="text-white mb-0 me-3">
+                        Bienvenido, <b><?php echo isset($_SESSION['name']) ? htmlspecialchars($_SESSION['name']) : 'Usuario'; ?></b>
+                    </p>
+                    <a href="cerrar_sesion.php" class="btn btn-light btn-sm rounded-pill px-3">Cerrar Sesión</a>
+                </div>
+            </div>
         </div>
-    </div>
-</nav>
-
+    </nav>
 <div class="container mt-5">
 
 <?php
