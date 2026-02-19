@@ -216,3 +216,53 @@ WHERE name_tabla = 'Teoría del Horizonte Infinito';
 UPDATE informacion 
 SET img_tabla = '../fotos/orion.jpg'
 WHERE name_tabla = 'Federación Interestelar de Orion';
+
+INSERT INTO informacion (name_tabla, info_tabla, img_tabla) VALUES 
+
+('Reino de España', 
+'España es un Estado transcontinental, país soberano y miembro de la Unión Europea, constituido en Estado social y democrático de derecho. Su forma de gobierno es la monarquía parlamentaria. Situada principalmente en la península ibérica, su territorio se organiza en diecisiete comunidades autónomas y dos ciudades autónomas. Con una historia milenaria que abarca desde la presencia romana (Hispania) hasta su etapa como imperio global, España ha dejado un legado cultural inmenso, siendo el español la segunda lengua materna más hablada del mundo.', 
+'fotos/espana.jpg'),
+
+('La Antigua Grecia y la Democracia', 
+'La Antigua Grecia es considerada la cuna de la civilización occidental. En el siglo V a.C., la ciudad-estado de Atenas desarrolló la "demokratia", el primer sistema de gobierno donde los ciudadanos participaban directamente en la toma de decisiones políticas. Este periodo vio el florecimiento de la filosofía con figuras como Sócrates, Platón y Aristóteles, así como avances en matemáticas, teatro y arquitectura que sentaron las bases del pensamiento científico y artístico moderno.', 
+'fotos/grecia.jpg'),
+
+('La Revolución Francesa', 
+'Proceso social y político ocurrido en Francia entre 1789 y 1799 cuyas principales consecuencias fueron el derrocamiento de Luis XVI y la abolición de la monarquía absoluta. Bajo el lema "Libertad, Igualdad, Fraternidad", este conflicto marcó el inicio de la Edad Contemporánea al sentar las bases de la democracia moderna a través de la Declaración de los Derechos del Hombre y del Ciudadano, influyendo en todos los movimientos revolucionarios posteriores en Europa y América.', 
+'fotos/revolucion.jpg'),
+
+('El Imperio Romano', 
+'El Imperio Romano fue el tercer periodo de la civilización romana en la Antigüedad clásica, caracterizado por una forma de gobierno autocrática. En su apogeo, bajo el reinado de Trajano, controló territorios desde el océano Atlántico hasta las orillas del mar Caspio y el golfo Pérsico. Su legado incluye el derecho romano (base de la legislación actual), el latín (del cual derivan las lenguas romances), técnicas avanzadas de ingeniería como acueductos y calzadas, y la difusión del cristianismo.', 
+'fotos/roma.jpg'),
+
+('Concepto de Estado y Nación', 
+'En ciencia política, un Estado es una organización política constituida por instituciones burocráticas estables a través de las cuales ejerce el monopolio del uso de la fuerza dentro de un territorio limitado. Por otro lado, una Nación se define como una comunidad de personas que comparten una cultura, historia, lengua o etnia común, y que poseen conciencia de pertenecer a un mismo cuerpo social. Un Estado-Nación surge cuando una nación se organiza políticamente dentro de un territorio soberano.', 
+'fotos/politica.jpg'),
+
+('La Ruta de la Seda', 
+'La Ruta de la Seda fue una red de vías comerciales organizadas a partir del negocio de la seda china desde el siglo I a.C. Se extendía por todo el continente asiático conectando a China con Mongolia, el subcontinente indio, Persia, Arabia, Siria, Turquía, Europa y África. Más allá del intercambio de mercancías como especias, papel o pólvora, fue la principal vía de difusión de ideas, religiones (como el budismo y el islam) y tecnologías entre Oriente y Occidente durante más de 1.500 años.', 
+'fotos/seda.jpg');
+
+UPDATE informacion 
+SET img_tabla = '../fotos/Bandera_de_España.svg.webp'
+WHERE name_tabla = 'Reino de España';
+
+UPDATE informacion 
+SET img_tabla = '../fotos/antiguaGrecia.jpeg'
+WHERE name_tabla = 'La Antigua Grecia y la Democracia';
+
+UPDATE informacion 
+SET img_tabla = '../fotos/revoluciónFrancesa.jpg'
+WHERE name_tabla = 'La Revolución Francesa';
+
+UPDATE informacion 
+SET img_tabla = '../fotos/imperioRomano.png'
+WHERE name_tabla = 'El Imperio Romano';
+
+UPDATE informacion 
+SET img_tabla = '../fotos/ESTADOS.jpg'
+WHERE name_tabla = 'Concepto de Estado y Nación';
+
+UPDATE informacion 
+SET img_tabla = '../fotos/rutaSeda.png'
+WHERE name_tabla = 'La Ruta de la Seda';
