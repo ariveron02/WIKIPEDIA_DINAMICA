@@ -18,40 +18,45 @@
             </a>
     </nav>
 
-    <!-- Formulario centrado -->
-    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-        <div class="card shadow-lg p-4" style="width: 100%; max-width: 450px; border-radius: 15px;">
-            <h2 class="card-title text-center mb-4">Iniciar Sesión</h2>
+    <div class="container d-flex align-items-center justify-content-center" style="min-height: 70vh;">
+        <div class="row w-100 align-items-center justify-content-center">
+        
+            <div class="col-md-5 d-flex justify-content-center mb-5 mb-md-0">
+                <div class="card shadow-lg p-4" style="width: 100%; max-width: 400px; border-radius: 15px;">
+                    <h2 class="card-title text-center mb-4">Iniciar Sesión</h2>
 
-            <!-- MENSAJE DE ERROR -->
-                <?php if (isset($_GET['error'])): ?>
-                    <div class="alert alert-danger text-center">
-                        Correo o contraseña incorrectos.
-                    </div>
-                <?php endif; ?>
+                    <?php if (isset($_GET['error'])): ?>
+                        <div class="alert alert-danger text-center py-2 small">
+                            Correo o contraseña incorrectos.
+                        </div>
+                    <?php endif; ?>
 
-            <!-- Formulario -->
-            <form action="../backend/procesarLogin.php" method="POST" class="needs-validation" novalidate>
-                    
-                    <div class="mb-3">
-                        <label for="email" class="form-label fw-bold">Correo electrónico</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
-                        <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
-                    </div>
+                    <form action="../backend/procesarLogin.php" method="POST" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="password" class="form-label fw-bold">Contraseña</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required>
-                        <div class="invalid-feedback">La contraseña es obligatoria.</div>
-                    </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label fw-bold">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required>
+                        </div>
 
-                    <div class="d-grid gap-2 mt-4">
-                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                    </div>
-                    
-                </form>
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                        </div>
+                    </form>
 
-            <p class="text-center mt-3 mb-0">¿No tienes cuenta? <a href="registro.php">Regístrate</a></p>
+                    <p class="text-center mt-3 mb-0 small">¿No tienes cuenta? <a href="registro.php">Regístrate</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-5 d-flex justify-content-center">
+                <div class="border border-2 border-warning rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 200px; height: 200px;">
+                    <div class="logo-box m-0 fs-1 fw-bold">W</div>
+                </div>
+            </div>
+
         </div>
     </div>
 
