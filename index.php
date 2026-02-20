@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../fotos/logowiki.png">
 </head>
 
 <body>
@@ -16,40 +17,38 @@
     ?>
         <!-- CAROUSEL CON OVERLAY -->
         <main class="flex-grow-1">
-            <div id="carouselFondo" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
+            <div id="miCarrusel" class="carousel slide" data-bs-ride="carousel">
+    
+    <div class="carousel-inner">
+        
+        <!-- Imagen 1 -->
+        <div class="carousel-item active">
+            <img src="fotos/imagen1W.png" class="d-block w-100 carousel-img" alt="Mundo">
+        </div>
 
-                    <div class="carousel-item active">
-                        <img src="fotos/mundo.webp" class="d-block w-100 carousel-img" alt="Mundo">
-                        <br>
-                        <!-- TEXTO CENTRAL -->
-                        <div class="conocimiento d-flex flex-column justify-content-center align-items-center text-center">
-                            <h1>Explora el conocimiento</h1>
-                            <p>Una enciclopedia colaborativa moderna</p>
-                            <a href="#" class="btn btn-primary btn-lg mt-3">Explorar artículos</a>
-                        </div>
-                    </div>
+        <!-- Imagen 2 -->
+        <div class="carousel-item">
+            <img src="fotos/imagen3WW.png" class="d-block w-100 carousel-img" alt="Programación">
+        </div>
 
-                    <div class="carousel-item">
-                        <img src="fotos/articulo.avif" class="d-block w-100 carousel-img" alt="Artículo">
-                        <div class="conocimiento d-flex flex-column justify-content-center align-items-center text-center">
-                            <h1>Explora el conocimiento</h1>
-                            <p>Una enciclopedia colaborativa moderna</p>
-                            <a href="#" class="btn btn-primary btn-lg mt-3">Explorar artículos</a>
-                        </div>
-                    </div>
+        <!-- Imagen 3 -->
+        <div class="carousel-item">
+            <img src="fotos/imagen0W.png" class="d-block w-100 carousel-img" alt="Código">
+        </div>
 
-                    <div class="carousel-item">
-                        <img src="fotos/ciencia.jpg" class="d-block w-100 carousel-img" alt="Conocimiento">
-                        <div class="conocimiento d-flex flex-column justify-content-center align-items-center text-center">
-                            <h1>Explora el conocimiento</h1>
-                            <p>Una enciclopedia colaborativa moderna</p>
-                            <a href="#" class="btn btn-primary btn-lg mt-3">Explorar artículos</a>
-                        </div>
-                    </div>
+    </div>
 
-                </div>
-            </div>
+    <!-- Botón anterior -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <!-- Botón siguiente -->
+    <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
         </main>
 
         <section id="articulos" class="py-5">
@@ -90,24 +89,6 @@
         </div>
     </section>
 
-    <section id="sobre-nosotros" class="py-5 text-white" style="background-color: #003366;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <h2 class="fw-bold">Sobre WikiÁgora</h2>
-                    <p class="lead">Somos una plataforma dedicada a democratizar el acceso a la información mediante la colaboración ciudadana.</p>
-                    <p>Nuestro objetivo es crear un espacio seguro y moderno donde expertos y entusiastas puedan compartir conocimientos verificados de forma gratuita.</p>
-                    <a href="frontend/login.php" class="btn btn-warning fw-bold px-4">Conoce al equipo</a>
-                </div>
-                <div class="col-md-6 text-center">
-                    <div class="border border-2 border-warning rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
-                        <div class="logo-box m-0 fs-1">W</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="categorias" class="py-5 bg-white"> <div class="container">
         <h2 class="text-center mb-5 fw-bold" style="color: #003366;">Explorar por Categorías</h2>
         <div class="row text-center g-3">
@@ -132,6 +113,23 @@
                 </div>
             </div>
         </div>
+        </div>
+    </section>
+    <section id="sobre-nosotros" class="py-5 text-white" style="background-color: #003366;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h2 class="fw-bold">Sobre WikiÁgora</h2>
+                    <p class="lead">Somos una plataforma dedicada a democratizar el acceso a la información mediante la colaboración ciudadana.</p>
+                    <p>Nuestro objetivo es crear un espacio seguro y moderno donde expertos y entusiastas puedan compartir conocimientos verificados de forma gratuita.</p>
+                    <a href="frontend/login.php" class="btn btn-warning fw-bold px-4">Conoce al equipo</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="border border-2 border-warning rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 150px; height: 150px;">
+                        <div class="logo-box m-0 fs-1">W</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script>

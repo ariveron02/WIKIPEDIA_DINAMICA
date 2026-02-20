@@ -70,6 +70,12 @@ if($resultado && $resultado->num_rows > 0){
             case 'Biblioteca Subterránea de Valdris': $id='biblio'; break;
             case 'Teoría del Horizonte Infinito': $id='universo'; break;
             case 'Federación Interestelar de Orion': $id='orion'; break;
+            case 'Reino de España': $id='espana'; break;
+            case 'La Antigua Grecia y la Democracia': $id='grecia'; break;
+            case 'La Revolución Francesa': $id='francia'; break;
+            case 'El Imperio Romano': $id='roma'; break;
+            case 'Concepto de Estado y Nación': $id='estado'; break;
+            case 'La Ruta de la Seda': $id='ruta'; break;
             default: $id='articulo'.$row['id_tabla']; break;
         }
 ?>
