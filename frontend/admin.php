@@ -140,7 +140,7 @@ $resultado_peticiones = mysqli_query($conn, $sql_pet);
         </table>
     </div>
 </div>
-
+<script src="../js/articulos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
