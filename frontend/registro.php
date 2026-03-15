@@ -4,6 +4,7 @@ $error = $_GET['error'] ?? 0; // Recibir código de error desde procesarRegistro
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@ $error = $_GET['error'] ?? 0; // Recibir código de error desde procesarRegistro
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body class="bg-light">
 
     <!-- NAVBAR PRINCIPAL -->
@@ -27,7 +29,7 @@ $error = $_GET['error'] ?? 0; // Recibir código de error desde procesarRegistro
 
     <div class="container d-flex align-items-center justify-content-center" style="min-height: 70vh; margin-top: 30px;">
         <div class="row w-100 align-items-center justify-content-center">
-            
+
             <div class="col-md-5 d-flex justify-content-center mb-5 mb-md-0">
                 <div class="card shadow-lg p-4" style="width: 100%; max-width: 450px; border-radius: 15px;">
                     <h2 class="card-title text-center mb-4">Crear Cuenta</h2>
@@ -35,11 +37,17 @@ $error = $_GET['error'] ?? 0; // Recibir código de error desde procesarRegistro
                     <?php if ($error): ?>
                         <div class="alert alert-danger py-2 small">
                             <?php
-                                switch ($error) {
-                                    case 1: echo "Datos inválidos. Revisa los campos."; break;
-                                    case 2: echo "Este correo ya está registrado."; break;
-                                    case 3: echo "Error interno al registrar el usuario."; break;
-                                }
+                            switch ($error) {
+                                case 1:
+                                    echo "Datos inválidos. Revisa los campos.";
+                                    break;
+                                case 2:
+                                    echo "Este correo ya está registrado.";
+                                    break;
+                                case 3:
+                                    echo "Error interno al registrar el usuario.";
+                                    break;
+                            }
                             ?>
                         </div>
                     <?php endif; ?>
@@ -79,4 +87,5 @@ $error = $_GET['error'] ?? 0; // Recibir código de error desde procesarRegistro
     </div>
     <?php include '../includes/footer.php'; ?>
 </body>
+
 </html>

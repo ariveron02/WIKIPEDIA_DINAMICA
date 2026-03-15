@@ -1,4 +1,5 @@
-<div class="footer-container"> <footer class="custom-footer shadow-sm"> 
+<div class="footer-container">
+    <footer class="custom-footer shadow-sm">
         <div class="container">
             <div class="row text-center text-md-start align-items-center">
 

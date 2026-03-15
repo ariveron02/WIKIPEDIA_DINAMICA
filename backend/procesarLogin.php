@@ -34,15 +34,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($usuario['rol'] === 'admin') {
                 header("Location: ../frontend/admin.php");
-            }else{
+            } else {
                 header("Location: pagPrincipal.php");
             }
             exit();
         }
     }
 
-    // Si algo falla, redirigimos al login con error
     header("Location: ../frontend/login.php?error=1");
     exit();
 }
-?>

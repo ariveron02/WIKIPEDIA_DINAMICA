@@ -1,286 +1,287 @@
 /* ===== GENERAL ===== */
-html, body {
-    height: 100%;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 80px;
 }
 
 main {
-    flex: 1; 
+  flex: 1;
 }
 
 .fade-in-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 .fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ===== TOAST BIENVENIDA ===== */
 #bienvenida {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #0d3b66;
-    color: white;
-    padding: 16px 22px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    z-index: 9999;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    font-size: 0.95rem;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0d3b66;
+  color: white;
+  padding: 16px 22px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  font-size: 0.95rem;
 }
 
 #bienvenida.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ===== NAVBAR PROFESIONAL ===== */
 .navbar {
-    background-color: #0d3b66; /* Azul serio y elegante */
-    padding: 15px 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra ligera */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d3b66; /* Azul serio y elegante */
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Logo cuadrado */
 .logo-box {
-    background-color: #ffffff;  /* Fondo blanco */
-    color: #0d3b66;            /* Color del logo */
-    font-weight: 700;
-    width: 55px;
-    height: 55px;
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra sutil */
-    transition: transform 0.2s ease;
+  background-color: #ffffff; /* Fondo blanco */
+  color: #0d3b66; /* Color del logo */
+  font-weight: 700;
+  width: 55px;
+  height: 55px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  transition: transform 0.2s ease;
 }
 
 .logo-box:hover {
-    transform: scale(1.05); /* Pequeño efecto hover */
+  transform: scale(1.05); /* Pequeño efecto hover */
 }
 
-/* Texto del nombre */
 .navbar-brand span {
-    font-size: 28px;
-    font-weight: 600;
-    color: #ffffff;
-    letter-spacing: 1px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
 }
 
-/* Links del menú */
 .nav-link {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    margin-right: 20px;
-    padding: 5px 0;
-    transition: color 0.3s, border-bottom 0.3s;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 20px;
+  padding: 5px 0;
+  transition:
+    color 0.3s,
+    border-bottom 0.3s;
 }
 
 .nav-link:hover {
-    color: #ffd700; /* Amarillo elegante */
-    border-bottom: 2px solid #ffd700;
-    border-radius: 2px;
+  color: #ffd700;
+  border-bottom: 2px solid #ffd700;
+  border-radius: 2px;
 }
 
-/* Buscador */
 .search-input {
-    border-radius: 25px;
-    padding: 6px 18px;
-    font-size: 14px;
-    width: 220px;
-    border: 1px solid #ccc;
-    transition: box-shadow 0.3s, border-color 0.3s;
+  border-radius: 25px;
+  padding: 6px 18px;
+  font-size: 14px;
+  width: 220px;
+  border: 1px solid #ccc;
+  transition:
+    box-shadow 0.3s,
+    border-color 0.3s;
 }
 
 .search-input:focus {
-    border-color: #ffd700;
-    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
-    outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  outline: none;
 }
 
-/* Botones refinados */
 .btn {
-    padding: 6px 18px;
-    font-size: 14px;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+  padding: 6px 18px;
+  font-size: 14px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn-outline-light {
-    color: #ffffff;
-    border-color: #ffffff;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .btn-outline-light:hover {
-    background-color: #ffffff;
-    color: #0d3b66;
+  background-color: #ffffff;
+  color: #0d3b66;
 }
 
 .btn-light {
-    background-color: #ffd700; /* Dorado serio */
-    color: #0d3b66;
+  background-color: #ffd700; /* Dorado serio */
+  color: #0d3b66;
 }
 
 .btn-light:hover {
-    background-color: #e6c200;
-    color: #0d3b66;
+  background-color: #e6c200;
+  color: #0d3b66;
 }
 
 /* Adaptable a móviles */
 @media (max-width: 768px) {
-    .nav-link {
-        font-size: 14px;
-        margin-right: 10px;
-    }
-    .search-input {
-        width: 150px;
-        font-size: 13px;
-    }
-    .navbar-brand span {
-        font-size: 24px;
-    }
+  .nav-link {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .search-input {
+    width: 150px;
+    font-size: 13px;
+  }
+  .navbar-brand span {
+    font-size: 24px;
+  }
 }
 
-/* ===== CAROUSEL ===== */
-
 .carousel-item {
-    position: relative;
-    height: 80vh; 
+  position: relative;
+  height: 80vh;
 }
 
 .carousel-img {
-    height: 100%;
-    object-fit: cover;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* ===== CONTENEDOR CONOCIMIENTO ===== */
 .conocimiento {
-    position: relative; 
-    z-index: 2;
-    max-width: 90%;
-    padding: 30px 20px;
-    color: white;
-    background: rgba(0, 0, 0, 0.35); 
-    border-radius: 20px;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7); 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  padding: 30px 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .conocimiento h1 {
-    font-size: 3.5rem; 
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .conocimiento p {
-    font-size: 1.6rem;
-    margin-bottom: 1.8rem;
-    opacity: 0.95;
-    line-height: 1.5;
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+  opacity: 0.95;
+  line-height: 1.5;
 }
 
-/* ===== SECCIONES EXTRA (Artículos, Categorías, Sobre nosotros) ===== */
 .hover-elevate {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .hover-elevate:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-img-top {
-    height: 200px;
-    object-fit: cover;
+  height: 200px;
+  object-fit: cover;
 }
 
-/* ===== FOOTER PERSONALIZADO (Caja redondeada y flotante) ===== */
-
-/* Contenedor que da el margen simétrico en todos los lados */
 footer.footer-container {
-    padding: 25px; /* Margen igual arriba, abajo e izquierda/derecha */
+  padding: 25px;
 }
 
 .custom-footer {
-    background: #0d3b66; 
-    color: #f1f1f1;
-    padding: 60px 40px; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 0; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  background: #0d3b66;
+  color: #f1f1f1;
+  padding: 60px 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .custom-footer .footer-title {
-    font-weight: 700;
-    margin-bottom: 20px;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
 }
 
 .custom-footer .footer-links {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .custom-footer .footer-links li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .custom-footer .footer-links a {
-    color: #f1f1f1; /* Color original */
-    text-decoration: none;
-    font-size: 15px;
-    transition: 0.3s;
+  color: #f1f1f1; /* Color original */
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
 .custom-footer .footer-links a:hover {
-    color: #ffd700; /* Tu amarillo original */
-    text-decoration: underline;
+  color: #ffd700; /* Tu amarillo original */
+  text-decoration: underline;
 }
 
 .custom-footer .footer-divider {
-    border-color: rgba(255,255,255,0.3);
-    margin: 35px 0;
+  border-color: rgba(255, 255, 255, 0.3);
+  margin: 35px 0;
 }
 
 .custom-footer .small {
-    color: rgba(255,255,255,0.8);
-    font-size: 14px;
-    margin-top: 20px;
-    display: block;
-    text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
 }
 
 /* Responsive Footer */
 @media (max-width: 768px) {
-    .custom-footer {
-        padding: 40px 20px;
-        text-align: center;
-    }
-    .custom-footer .footer-links {
-        text-align: center;
-    }
+  .custom-footer {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .custom-footer .footer-links {
+    text-align: center;
+  }
 }
