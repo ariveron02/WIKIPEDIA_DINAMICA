@@ -22,7 +22,7 @@
 
                 <div class="col-md-4 mb-4 text-center text-md-end">
                     <h5 class="footer-title">Nuestro Equipo</h5>
-                    <p class="mb-1">Aitor, Alberto, David y Sara</p>
+                    <p class="mb-1">Aitor, Alberto, David, Jesús y Sara</p>
                     <a href="mailto:contacto@wikiagora.com" class="btn btn-outline-light btn-sm mt-2">Contactar</a>
                 </div>
 

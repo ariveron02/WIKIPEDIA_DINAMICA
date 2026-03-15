@@ -1,6 +1,4 @@
-// ================================
 // CLASE ARTICULO
-// ================================
 class Articulo {
     constructor(data){
         this.id = data.id_tabla || data.id; 
@@ -15,21 +13,16 @@ class Articulo {
     }
 }
 
-// ================================
 // ARTÍCULOS DE LA BD
-// ================================
 const listaArticulos = (typeof articulosBD !== 'undefined' ? articulosBD : []).map(a => new Articulo(a));
 
-// ================================
-// INYECTAR ARTÍCULOS DESDE LOCALSTORAGE
-// ================================
+// TODO DENTRO DE UN SOLO DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
 
     const contenedor = document.querySelector('.container.mt-5');
-
-    // Artículos guardados desde la página normal (usuario)
     const articulosDOM = JSON.parse(localStorage.getItem('articulosDOM')) || [];
 
+    // INYECTAR ARTÍCULOS DESDE LOCALSTORAGE
     articulosDOM.forEach(a => {
         const div = document.createElement('div');
         div.className = "card mb-5 shadow-sm p-3 position-relative articulo";
@@ -52,9 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contenedor.appendChild(div);
     });
 
-    // ================================
     // EFECTO ESCALONADO AL CARGAR
-    // ================================
     const articulosCards = document.querySelectorAll(".articulo");
     articulosCards.forEach((articulo, index) => {
         articulo.style.opacity = "0";
@@ -64,9 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, index * 200);
     });
 
-    // ================================
     // FAVORITOS CON LOCALSTORAGE
-    // ================================
     document.querySelectorAll(".favorito-btn").forEach(btn => {
         btn.addEventListener("click", () => {
             const id = btn.dataset.id;
@@ -74,19 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if(!favoritos.includes(id)) favoritos.push(id);
             localStorage.setItem("favoritos", JSON.stringify(favoritos));
 
-            // MENSAJE TEMPORAL
             const mensaje = document.createElement("div");
             mensaje.className = "alert alert-success mt-2";
             mensaje.textContent = "Artículo añadido a favoritos";
             btn.parentElement.appendChild(mensaje);
-
             setTimeout(() => mensaje.remove(), 2000);
         });
     });
 
-    // ================================
     // CONTADOR DE VISITAS
-    // ================================
     let visitas = JSON.parse(localStorage.getItem("visitas")) || {};
     document.querySelectorAll(".articulo").forEach(card => {
         const id = card.id.replace("articulo","");
@@ -100,9 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 800);
     });
 
-    // ================================
     // BUSCADOR FUNCIONAL
-    // ================================
     const buscador = document.getElementById("buscador");
     if(buscador){
         buscador.form.addEventListener("submit", e => {
@@ -116,9 +99,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ================================
+    // CONFIRMACIÓN + CONTADORES (ADMIN)
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', function (e) {
+            const boton = e.submitter;
+            if (!boton) return;
+            const accion = boton.value === 'aceptada' ? 'aceptar' : 'rechazar';
+            const confirmar = confirm(`¿Estás seguro de que quieres ${accion} esta petición?`);
+            if (!confirmar) {
+                e.preventDefault();
+            }
+        });
+    });
+
+    const contadorUsuarios = document.getElementById('contador-usuarios');
+    if (contadorUsuarios) {
+        const filas = document.querySelectorAll('#tabla-usuarios tbody tr td.fw-semibold');
+        contadorUsuarios.textContent = filas.length;
+    }
+
+    const contadorPeticiones = document.getElementById('contador-peticiones');
+    if (contadorPeticiones) {
+        const pendientes = document.querySelectorAll('.badge.bg-warning');
+        contadorPeticiones.textContent = pendientes.length;
+    }
+
     // FORMULARIO PARA USUARIO: AÑADIR ARTÍCULOS
-    // ================================
     const formAgregar = document.getElementById("formAgregarArticulo");
     const mensajeForm = document.getElementById("mensajeArticulo");
     if(formAgregar){
@@ -132,11 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 img: data.get("img")
             };
 
-            // Guardar en LocalStorage
             articulosDOM.push(nuevoArticulo);
             localStorage.setItem("articulosDOM", JSON.stringify(articulosDOM));
 
-            // Inyectar en DOM
             const div = document.createElement("div");
             div.className = "card mb-5 shadow-sm p-3 position-relative articulo";
             div.id = "articulo" + nuevoArticulo.id;
@@ -157,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             contenedor.appendChild(div);
 
-            // Añadir funcionalidad de favorito al nuevo artículo
             div.querySelector(".favorito-btn").addEventListener("click", () => {
                 let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
                 if(!favoritos.includes(nuevoArticulo.id.toString())) favoritos.push(nuevoArticulo.id.toString());
@@ -174,4 +177,5 @@ document.addEventListener('DOMContentLoaded', () => {
             formAgregar.reset();
         });
     }
-});
+
+}); 

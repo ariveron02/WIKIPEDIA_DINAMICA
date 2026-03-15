@@ -51,6 +51,30 @@ $resultado_peticiones = mysqli_query($conn, $sql_pet);
     </nav>
 </div>
 
+<!-- CONTADORES -->
+<div class="container mt-4">
+    <div class="row g-3 mb-4">
+        <div class="col-md-6">
+            <div class="p-4 border rounded-4 shadow-sm bg-light d-flex align-items-center gap-3">
+                <span style="font-size:2rem;">👤</span>
+                <div>
+                    <div class="text-secondary small fw-bold text-uppercase">Usuarios registrados</div>
+                    <div class="fw-bold fs-3" id="contador-usuarios">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-4 border rounded-4 shadow-sm bg-light d-flex align-items-center gap-3">
+                <span style="font-size:2rem;">📋</span>
+                <div>
+                    <div class="text-secondary small fw-bold text-uppercase">Peticiones pendientes</div>
+                    <div class="fw-bold fs-3" id="contador-peticiones">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container mt-5">
     <!-- Usuarios -->
     <div class="row mb-4 ps-2">
@@ -61,7 +85,7 @@ $resultado_peticiones = mysqli_query($conn, $sql_pet);
     </div>
 
     <div class="table-responsive border rounded-4 shadow-sm mb-5">
-        <table class="table table-hover mb-0">
+        <table class="table table-hover mb-0" id="tabla-usuarios">
             <thead class="table-light">
                 <tr>
                     <th class="py-3 ps-4 text-uppercase small fw-bold text-secondary">Nombre de Usuario</th>

@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <div id="toast-bienvenida">👋 ¡Bienvenido a WikiÁgora!</div>
     <?php
     include 'includes/header.php';
     ?>
@@ -136,7 +135,7 @@
     </section>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/scroll.js"></script> 
-    <div id="toast-bienvenida">👋 ¡Bienvenido a WikiÁgora!</div>  
+    <div id="bienvenida">👋👋 ¡Bienvenido a WikiÁgora! 👋👋</div>  
     <?php include 'includes/footer.php'; ?>
 </body>
 </html>

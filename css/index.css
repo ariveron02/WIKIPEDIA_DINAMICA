@@ -26,7 +26,7 @@ main {
 }
 
 /* ===== TOAST BIENVENIDA ===== */
-#toast-bienvenida {
+#bienvenida {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -42,7 +42,7 @@ main {
     font-size: 0.95rem;
 }
 
-#toast-bienvenida.show {
+#bienvenida.show {
     opacity: 1;
     transform: translateY(0);
 }
